@@ -1,0 +1,69 @@
+------Create Database -------------
+
+    CREATE DATABASE <DATABASE_NAME>;
+
+------DROP/DELETE DATABASES----------------
+
+    DROP DATABASE <DATABASE_NAME>;
+
+------USE A SPECIFIC DATABASE ----------
+
+       USE <DATABASE_NAME>;
+
+------SHOW THE CURRENT DATABASE IN WHICH WE ARE IN ---------
+
+    SELECT DATABASE();
+
+-------IF HE CURRENT DB IS DELETED THEN SELECT DATABASE()  SHOWS NULL -----    
+
+************************************************
+
+DATABASE is just a set of bunch of tables
+
+tabels are the heart of sql
+tabels holds the data  "a collection of related data held in a structured 
+                            format within a Database"
+
+********************************************
+
+        DATA TYPES
+
+ we need to enforce that our data in a column matches with one another otherwise it 
+                            will lead to data inconsistency
+
+   INT A WHOLE NUMBER WITH MAX VALUE 4294967295
+   VARCHAR VARIABLE LENGTH OF STRING  UPTO 256
+   ex varchar(100)
+
+-----------------CREATE TABEL----------------------
+
+    CREATE TABLE <TABLE_NAME> 
+    (
+        COLUMN_NAME DATA_TYPE,
+        COLUMN_NAME DATA_TYPE,
+        ....
+    )
+
+    E.X
+        create table tweets 
+        (   
+            username  vachar(15),
+            content    varchar(150),
+            number of favorites int
+        )  
+
+-----------------SHOW TABLES IN A DATABASE------------------------
+
+        SHOW TABLES;
+
+-----------------SHOW COLUMNS ------------------
+
+        SHOW COLUMNS FROM <TABLE_NAME>
+        OR 
+        DESC <TABLE_NAME>       
+
+------------------DELETE TABLES ------------------
+
+        DROP TABLE <TABLE_NAME>
+        E.x
+        DROP TABLE cats; 

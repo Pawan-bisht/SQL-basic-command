@@ -1,0 +1,36 @@
+-----------------INSERTING VALUES IN TABLE------------------
+
+INSERT INTO <TABLE_NAME> 
+        (COLUMN_NAME,.....)
+        VALUES (value1,value2,.....)
+
+INSERTING MULTIPLE VALUES
+
+INSERT INTO <TABLE_NAME>
+    (COLUMN_NAME,.....)
+    VALUES (value1,value2,....), (value1,value2,....),(value1,value2,....)
+
+OR
+ INSERT INTO table_name 
+            (column_name, column_name) 
+VALUES      (value, value), 
+            (value, value), 
+            (value, value);
+
+
+---------------------About NULL ----------------------
+
+NULL means the value is NOT KNOWN i,e SQL says I dont know what this is or 
+there is no specified values
+But that doesnt mean ZERO value
+To specify the not null in table  is by 
+create Table <table_name>(column_name <data_type> NOT NULL);
+But if we didnt specify the default value then we can say that inserting into this table 
+as any column NULL then the default value get picked up 
+Ex. for INTEGER default value is   0
+    for VARCHAR default value is   ''  (empty string but it is not NULL)
+
+
+    SHOW WARNINGS;
+
+----------------------DEFAULT VALUES   
