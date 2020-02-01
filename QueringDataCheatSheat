@@ -33,4 +33,6 @@ Ex. for INTEGER default value is   0
 
     SHOW WARNINGS;
 
-----------------------DEFAULT VALUES   
+----------------------DEFAULT VALUES---------------------------
+
+For determine the default value of a column 
