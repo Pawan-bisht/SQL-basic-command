@@ -24,7 +24,9 @@ NULL means the value is NOT KNOWN i,e SQL says I dont know what this is or
 there is no specified values
 But that doesnt mean ZERO value
 To specify the not null in table  is by 
+
 create Table <table_name>(column_name <data_type> NOT NULL);
+
 But if we didnt specify the default value then we can say that inserting into this table 
 as any column NULL then the default value get picked up 
 Ex. for INTEGER default value is   0
@@ -36,3 +38,55 @@ Ex. for INTEGER default value is   0
 ----------------------DEFAULT VALUES---------------------------
 
 For determine the default value of a column 
+
+CREATE TABLE cats3
+  (
+    name VARCHAR(20) DEFAULT 'no name provided',
+    age INT DEFAULT 99
+  );
+
+    default value is provided doesnt mean that the column cant accept the null value;
+    It can indeed;
+    To provided that our caloumn also doesnt acccept the null value we have to specify,
+    it when we write "Create Table command".
+   For Ex
+   CREATE TABLE cats3
+  (
+    name VARCHAR(20) NT NULL DEFAULT 'no name provided',
+    age INT NOT NULL DEFAULT 99
+  ); 
+
+
+--------------------PRIMARY KEY -----------------------------------
+
+To avoid the mis-conception of same thing occuring on MULTIPLE data.
+like  name           age
+      Mike           10
+      Mike           10
+      Mike           10               How we separately identified these things
+
+      So We use unique identifier
+    like UseId
+
+    CREATE TABLE unique_cats2 (
+    cat_id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(100),
+    age INT,
+    PRIMARY KEY (cat_id)   
+);   
+
+            OR
+
+    CREATE TABLE unique_cats2 (
+    cat_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    age INT,   
+);        
+
+
+
+
+
+
+
+
