@@ -26,3 +26,36 @@ ex
     We can also compare tow columns;
     ex 
     SELECT * FROM cats WHERE cat_id=age;   
+
+-----------------------ALIASES -----------------------------
+These are usfull when we join tables, those having same column name.
+So its difficult to differentiate between them.That's why we use ALIASES;
+
+Ex
+
+SELECT cat_id As Id,name AS cat_name from <table_name>
+
+
+-----------------------UPDATE -------------------------------
+
+UPDATE <table_name> SET <column_name> = <value> where <condition>
+
+Always do select * before the update command
+
+
+-----------------------DELETE -------------------------------
+DELETE use to delete a particular or set of record.
+Ex
+    DELETE FROM <table_name> where <condition> 
+This delete the particular or set of record from table
+
+BUT  
+    DELETE FROM <table_name>
+
+    It deletes the every record in the table.coz condition doent meat anything.
+    But the table is not deleted. table is still their in the memory but as an 
+    empty table or shell.
+
+
+
+
