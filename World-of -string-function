@@ -53,8 +53,20 @@ Ex   SUBSTRING("HELLO WORLD",1,4);
           RLD
 
 
-   SELECT SUBSTRING(title,1,10) from books;       
+   SELECT SUBSTRING(title,1,10) from books;  
 
+   select concat(substring(title,1,10),'...') FROM books;  
+
++-------------------------------------+
+| concat(substring(title,1,10),'...') |
++-------------------------------------+
+| The Namesa...                       |
+| Norse Myth...                       |
+| American G...                       |
+| Interprete...                       |
+| A Hologram...                       |
+| The Circle...                       |   
++-------------------------------------+
 
 
 
