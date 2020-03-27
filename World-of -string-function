@@ -33,3 +33,28 @@ FROM books;
 | Jhumpa     | Lahiri         | Jhumpa *   * Lahiri                            |
 | Dave       | Eggers         | Dave *   * Eggers                              |
 +------------+----------------+------------------------------------------------+
+
+
+
+------------------------SUBSTRING-----------------------------------------------
+
+We want to get the part of a String. All the string in SQL starts with 1 No. index NOT from ZERO.
+The method is SUBSTRING , which takes 3 parameter.
+First as String.
+Second as Starting point index of the string.
+Third as the length of the character from the starting index in the string.
+Ex   SUBSTRING("HELLO WORLD",1,4);
+          HELL                       //From 1 index to upto 4 length of character
+     
+     SUBSTRING("HELLO WORLD",7);     //starts from given index to the end index
+          WORLD
+
+     SUBSTRING("HELLO WORLD",-3);    //starts from ending of index 
+          RLD
+
+
+   SELECT SUBSTRING(title,1,10) from books;       
+
+
+
+
