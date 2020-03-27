@@ -68,5 +68,49 @@ Ex   SUBSTRING("HELLO WORLD",1,4);
 | The Circle...                       |   
 +-------------------------------------+
 
+-------------------------------REPLACE--------------------------------
+
+To replace a substring or string with an another string.
+Its is CASE-SENSITIVE.
+
+ SELECT SUBSTRING(REPLACE(title,'e',3),1,10) FROM books;
+
++--------------------------------------+
+| SUBSTRING(REPLACE(title,'e',3),1,10) |
++--------------------------------------+
+| Th3 Nam3sa                           |
+| Nors3 Myth                           |
+| Am3rican G                           |
+| Int3rpr3t3                           |
++--------------------------------------+
+
+
+--------------------REVERSE------------------------------
+
+To reverse a string.
+SELECT reverse("Pawan bisht");
+     thsib nawaP
+
+SELECT CONCAT('woof', REVERSE('woof'));     
+
+-----------------------CHAR-LENGTH---------------------
+To count the number of character in a string.
+
+ select char_length(title) from books;
+
+
+ ----------------------UPPER AND LOWER CASE----------------
+
+To change the case of a string to lower or Upper
+SELECT LOWER('Hello World');
+ 
+SELECT UPPER(title) FROM books;
+ 
+SELECT CONCAT('MY FAVORITE BOOK IS ', UPPER(title)) FROM books;
+
+UPPER only takes one argument and CONCAT takes two or more arguments, 
+so they can't be switched in that way.
+
+
 
 
