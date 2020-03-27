@@ -1,0 +1,35 @@
+------------------RUNNING OF SQL FILE ----------------------------
+
+
+We can write any Sql DDL,DML command on any file and save this file with .sql extension
+Then we can run this file in any sql enable mode on cmd.
+First       mysql -u root -p       //enable the mysql in cmd
+Second      source  <path-of-the-file>   
+
+Ex   source  testing/insert.sql
+     source  first-file.sql
+
+----------------------CONCATINATION------------------------------
+
+We can concatinate any columns of a table
+by using CONCAT(<column_name>,<column_name>,....);
+
+SELECT author_fname AS first, author_lname AS last, 
+  CONCAT(author_fname, ' ', author_lname) AS full
+          FROM books;
+
+Concatinatiom using WITH SEPERATOR :
+
+SELECT 
+    CONCAT_WS(' - ', title, author_fname, author_lname) 
+FROM books;
+
++------------+----------------+------------------------------------------------+
+| first_name | last_name      | concat_ws(' * ',author_fname,' ',author_lname) |
++------------+----------------+------------------------------------------------+
+| Jhumpa     | Lahiri         | Jhumpa *   * Lahiri                            |
+| Neil       | Gaiman         | Neil *   * Gaiman                              |
+| Neil       | Gaiman         | Neil *   * Gaiman                              |
+| Jhumpa     | Lahiri         | Jhumpa *   * Lahiri                            |
+| Dave       | Eggers         | Dave *   * Eggers                              |
++------------+----------------+------------------------------------------------+
